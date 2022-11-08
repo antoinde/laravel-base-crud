@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Ciao a tutti da Antols</h1>
-    <h3>Model, Controller, Migration, Seeder, Faker, Home</h3>
+    <h3>Route, Model, Controller, Migration, Seeder, Faker, Home</h3>
 
     
 
