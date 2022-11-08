@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    @dump($comics)
+
+    @foreach($comics as $comic)
+    <div>
+        <a href="{{ route('comics.show', $comic->id) }}">{{ $comic['title'] }}</a>
+    </div>
+    @endforeach
+
 </body>
 </html>
