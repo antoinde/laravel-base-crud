@@ -1,4 +1,5 @@
-<div>
+<div  style="background-color:chocolate">
+    <div>
     <strong>title: </strong>
     {{ $comic['title'] }}
 </div>
@@ -8,7 +9,7 @@
 </div>
 <div>
     <strong>thumb: </strong>
-    {{ $comic['thumb'] }}
+    <img style="width=100px;" src="{{ $comic['thumb'] }}" alt="image of {{ $comic['series'] }}">
 </div>
 <div>
     <strong>price: </strong>
@@ -28,3 +29,4 @@
 </div>
 
 <a href="{{ route('comics.index') }}">torna indietro alla lista</a>
+</div>

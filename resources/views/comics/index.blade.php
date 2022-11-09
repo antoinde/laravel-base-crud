@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
-
-    @foreach($comics as $comic)
-    <div>
-        <a href="{{ route('comics.show', $comic->id) }}">{{ $comic['title'] }}</a>
-    </div>
-    @endforeach
-
+<body style="background-color:lightslategray">
+    <h1 style="margin-left: 30px;">Lista dei fumetti</h1>
+    <ol>
+        @foreach($comics as $comic)
+        <li style="margin: 5px 0;">
+            <a href="{{ route('comics.show', $comic->id) }}">{{ $comic['title'] }}</a>
+        </li>
+        @endforeach
+    </ol>
 </body>
 </html>
