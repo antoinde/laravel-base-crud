@@ -92,14 +92,21 @@ class ComicController extends Controller
         //
     }
 
+    public function confirmDelete(Comic $comic){
+        return view('comics.confirmDelete', compact('comic'));
+    }
+
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comic $comic)
     {
         //
+        $comic->delete();
+        return redirect()->route('comics.index');
+
     }
 }
