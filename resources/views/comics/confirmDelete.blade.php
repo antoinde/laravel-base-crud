@@ -4,4 +4,6 @@
     @method('DELETE')
     <input type="submit" value="Si">
 </form>
-<a href="{{ route('comics.index') }}">No</a>
+<button>
+    <a href="{{ route('comics.index') }}">No</a>
+</button>
