@@ -1,3 +1,6 @@
+<div>
+    <a href="{{ route('comics.edit', $comic->id) }}">EDIT</a>
+</div>
 <div  style="background-color:chocolate">
     <div>
     <strong>title: </strong>
