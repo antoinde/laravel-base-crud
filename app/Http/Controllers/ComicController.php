@@ -39,6 +39,33 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         //
+        /*
+            $table->string('title', 70);
+            $table->text('description');
+            $table->string('thumb', 300);
+            $table->float('price', 5, 2);
+            $table->string('series', 100);
+            $table->date('sale_date');
+            $table->string('type', 50);
+        */
+        //Validation
+        $request->validate([
+            'title' => 'required|unique:comics|max:70',
+            'thumb' => 'required|URL|max:300',
+            'price' => 'required|numeric',
+            'series' => 'required|max:100',
+            'sale_date' => 'required|date',
+            'type' => 'required|max:50'
+        ], [
+            'unique' => 'Il campo :key contiene un valore che già esiste nel database!',
+            'required' => 'Il campo :key e\' obbligatorio!',
+            'string' => 'In :key e\' richiesta una stringa!',
+            'date' => 'In :key e\' richiesto di inserire una data valida!',
+            'numeric' => 'In :key e\' richiesto di inserire un numero!',
+            'max' => 'In :key e\' richiesto di inserire in :key massimo :max caratteri!',
+            'URL' => 'Il campo :key deve contenere un URL valido!',
+        ] );
+        // End Validation
         $data=$request->all();
         $newComic= new Comic();
         
@@ -92,6 +119,24 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         //
+                //Validation
+                $request->validate([
+                    'title' => 'required|unique:comics|max:70',
+                    'thumb' => 'required|URL|max:300',
+                    'price' => 'required|numeric',
+                    'series' => 'required|max:100',
+                    'sale_date' => 'required|date',
+                    'type' => 'required|max:50'
+                ], [
+                    'unique' => 'Il campo :key contiene un valore che già esiste nel database!',
+                    'required' => 'Il campo :key e\' obbligatorio!',
+                    'string' => 'In :key e\' richiesta una stringa!',
+                    'date' => 'In :key e\' richiesto di inserire una data valida!',
+                    'numeric' => 'In :key e\' richiesto di inserire un numero!',
+                    'max' => 'In :key e\' richiesto di inserire in :key massimo :max caratteri!',
+                    'URL' => 'Il campo :key deve contenere un URL valido!',
+                ] );
+                // End Validation
         $data=$request->all();
         
         $comic->title = $data['title'];
