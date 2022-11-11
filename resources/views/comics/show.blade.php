@@ -9,9 +9,7 @@
 </head>
 
 <body>
-    <div>
-        <a href="{{ route('comics.edit', $comic->id) }}">EDIT</a>
-    </div>
+    
     <div style="background-color:chocolate">
         <div>
             <strong>title: </strong>
@@ -42,7 +40,8 @@
             {{ $comic['type'] }}
         </div>
 
-        <a href="{{ route('comics.index') }}">torna indietro alla lista</a>
+        <div><a href="{{ route('comics.index') }}">torna indietro alla lista</a></div>
+        <div><a href="{{ route('comics.edit', $comic->id) }}">EDIT</a></div>
     </div>
 
 </body>
