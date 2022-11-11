@@ -35,11 +35,11 @@
         </div>
         <div>
             <label for="thumb">thumb link:</label>
-            <input type="text" name="thumb" required value="{{ old('thumb', $comic->thumb) }}">
+            <input type="url" name="thumb" required value="{{ old('thumb', $comic->thumb) }}">
         </div>
         <div>
             <label for="price">price:</label>
-            <input type="text" name="price" required value="{{ old('price', $comic->price) }}">
+            <input type="number" name="price" required value="{{ old('price', $comic->price) }}">
         </div>
         <div>
             <label for="series">series:</label>
@@ -47,7 +47,7 @@
         </div>
         <div>
             <label for="sale_date">sale_date:</label>
-            <input type="text" name="sale_date" required value="{{ old('sale_date', $comic->sale_date) }}">
+            <input type="date" name="sale_date" required value="{{ old('sale_date', $comic->sale_date) }}">
         </div>
         <div>
             <label for="type">type:</label>
