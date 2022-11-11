@@ -25,31 +25,31 @@
         @csrf
         <div>
             <label for="title">title:</label>
-            <input type="text" name="title" id="" value="{{ old('title', '') }}">
+            <input type="text" name="title" required value="{{ old('title', '') }}">
         </div>
         <div>
             <label for="description">description:</label>
-            <input type="text" name="description" id="" value="{{ old('description', '') }}">
+            <input type="text" name="description" required value="{{ old('description', '') }}">
         </div>
         <div>
             <label for="thumb">thumb link:</label>
-            <input type="text" name="thumb" id="" value="{{ old('thumb', '') }}">
+            <input type="text" name="thumb" required value="{{ old('thumb', '') }}">
         </div>
         <div>
             <label for="price">price:</label>
-            <input type="text" name="price" id="" value="{{ old('price', '') }}">
+            <input type="text" name="price" required value="{{ old('price', '') }}">
         </div>
         <div>
             <label for="series">series:</label>
-            <input type="text" name="series" id="" value="{{ old('series', '') }}">
+            <input type="text" name="series" required value="{{ old('series', '') }}">
         </div>
         <div>
             <label for="sale_date">sale_date:</label>
-            <input type="text" name="sale_date" id="" value="{{ old('sale_date', '') }}">
+            <input type="text" name="sale_date" required value="{{ old('sale_date', '') }}">
         </div>
         <div>
             <label for="type">type:</label>
-            <input type="text" name="type" id="" value="{{ old('type', '') }}">
+            <input type="text" name="type" required value="{{ old('type', '') }}">
         </div>
         <div>
             <input type="submit" value="Send">
