@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <h1>CREATING PAGE:</h1>
     @if ($errors->any())
         <!-- VALIDATION -->
         <div class="alert alert-danger">

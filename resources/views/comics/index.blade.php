@@ -14,7 +14,9 @@
         @foreach ($comics as $comic)
             <li style="margin: 5px 0;">
                 <a href="{{ route('comics.show', $comic->id) }}">{{ $comic['title'] }}</a>
-                <a href="{{ route('comics.confirmDelete', $comic->id) }}">Elimina</a>
+                <button>
+                    <a class="button-type" href="{{ route('comics.confirmDelete', $comic->id) }}">Elimina</a>
+                </button>
                 <!--
             <form action="{{ route('comics.destroy', $comic->id) }}" method="post">
             @csrf
@@ -26,7 +28,7 @@
             </li>
         @endforeach
         <ul>
-            <li><a href="{{ route('comics.create') }}">Crea nuovo fumetto!</a></li>
+            <li><a class="button-type" href="{{ route('comics.create') }}">Crea nuovo fumetto!</a></li>
         </ul>
     </ol>
 </body>

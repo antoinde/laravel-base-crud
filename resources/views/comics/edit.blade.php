@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+    <h1>EDITING PAGE:</h1>
     @if ($errors->any())
         <!-- VALIDATION -->
         <div class="alert alert-danger">

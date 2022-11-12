@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+    <h1>SHOW ELEMENT PAGE:</h1>
     <div style="background-color:chocolate">
         <div>
             <strong>title: </strong>
@@ -40,8 +40,16 @@
             {{ $comic['type'] }}
         </div>
 
-        <div><a href="{{ route('comics.index') }}">torna indietro alla lista</a></div>
-        <div><a href="{{ route('comics.edit', $comic->id) }}">EDIT</a></div>
+        <div>
+            <button>
+                <a class="button-type" href="{{ route('comics.index') }}">torna indietro alla lista</a>
+            </button>
+        </div>
+        <div>
+            <button>
+                <a class="button-type" href="{{ route('comics.edit', $comic->id) }}">EDIT</a>
+            </button>
+        </div>
     </div>
 
 </body>
